@@ -1,4 +1,4 @@
-# Challenger to demonstrate the knowledge to create a Telemetry Restful API
+# Challenger to create a Telemetry Restful API
 
 
 # Technologies
