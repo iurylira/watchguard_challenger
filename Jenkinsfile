@@ -1,5 +1,11 @@
 pipeline {
-    agent any
+     agent {
+            docker {
+                image 'maven:3.8.4-jdk-11'  // Replace with your base image if needed
+                label 'docker'
+                args '-v /var/run/docker.sock:/var/run/docker.sock'
+            }
+        }
 
     environment {
         DOCKER_IMAGE = 'wg-challenger-app'
