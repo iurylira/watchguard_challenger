@@ -27,7 +27,7 @@ pipeline {
             }
         }
 
-        stage('Deploy Docker Container') {
+       /* stage('Deploy Docker Container') {
             steps {
                 script {
                     sh """
@@ -40,7 +40,7 @@ pipeline {
                     """
                 }
             }
-        }
+        }*/
     }
 
     post {
