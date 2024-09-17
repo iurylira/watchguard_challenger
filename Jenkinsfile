@@ -19,28 +19,6 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
-                }
-            }
-        }
-
-       /* stage('Deploy Docker Container') {
-            steps {
-                script {
-                    sh """
-                    docker stop ${DOCKER_IMAGE} || true
-                    docker rm ${DOCKER_IMAGE} || true
-                    """
-
-                    sh """
-                    docker run -d -p 8480:8480 --name ${DOCKER_IMAGE} ${DOCKER_IMAGE}:${DOCKER_TAG}
-                    """
-                }
-            }
-        }*/
     }
 
     post {
