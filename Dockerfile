@@ -1,4 +1,4 @@
-FROM openjdk:22-jdk-slim
+FROM jenkins/jenkins:lts-jdk21
 
 WORKDIR /app
 
